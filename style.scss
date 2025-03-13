@@ -191,8 +191,10 @@ nav {
 }
 .subject-units {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    &:first-child{
+    row-gap: 30px;
+    &:first-child {
         justify-content: space-between;
     }
 }
@@ -240,6 +242,52 @@ nav {
     p {
         color: white;
         font-size: 20px;
+    }
+}
+.Front-end-title {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.Front-end-text {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    .img-link {
+        width: 45%;
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        p {
+            color: gray;
+            text-align: center;
+        }
+    }
+}
+footer {
+    padding: 20px;
+    p {
+        font-size: 15px;
+        text-align: center;
+        color: white;
+        margin-bottom: 10px;
+        a {
+            text-decoration: none;
+            color: white;
+            transition: 0.25s;
+            &:hover {
+                color: $mypurple;
+            }
+        }
     }
 }
 #menu-window {
@@ -304,8 +352,25 @@ nav {
         display: block;
         text-align: end;
     }
+    .unit {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .main-title-content {
+        justify-content: space-evenly;
+    }
+    .subject-unit {
+        width: 45%;
+    }
 }
-
+@media screen and (max-width: 600px) {
+    .unit {
+        width: 80%;
+    }
+    .subject-unit {
+        width: 60%;
+    }
+}
 @media screen and (max-width: 425px) {
     #menu-window {
         .window-content {
@@ -317,5 +382,24 @@ nav {
         .list-link {
             font-size: 16px;
         }
+    }
+    .images .img-link{
+        width: 100%;
+    }
+    .subject-content {
+        padding: 20px;
+    }
+    .card-img{
+        width: 100%;
+    }
+    .card-text{
+        width: 100%;
+        text-align: center;
+    }
+    .unit{
+        width: 100%;
+    }
+    .subject-unit{
+        width: 80%;
     }
 }
